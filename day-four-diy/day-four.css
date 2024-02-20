@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    height: 400px;
+    width: 100%;
+    position: relative;   
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, .3);
+}
+.header-img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+.header-text{
+    position: relative;
+    top: 30%;
+    width:100%;
+    text-align: center;
+    color: white;
+}
+.edureka{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    border-radius: 50%;
+    border-color: white;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    color: blue;
+}
+.search-restaurant {
+    border: 0;
+    height: 30px;
+    width: 300px;
+    margin: 10px;
+}
+section{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    gap: 20px;
+    justify-content: space-around;
+    margin: 0 4% 0 4%;
+    padding: 10px 4% 10px 4%;
+
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid black;
+
+}
+.img-menu {
+    width: 45%;
+    height: 100% ;
+    overflow: hidden;
+}
+.menu-content {
+    width: 55%;
+    height: 100%;
+    padding: 10px;
+}
