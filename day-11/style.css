@@ -1,0 +1,18 @@
+.submit {
+  background-color: orange;
+  border-radius: 6px;
+  border: 2px solid black;
+  text-align: center;
+  padding: 6px;
+  color: white;
+}
+
+.reset {
+  background-color: orange;
+  border-radius: 6px;
+  border: 2px solid black;
+  text-align: center;
+  padding: 6px;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
