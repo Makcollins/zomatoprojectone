@@ -1,0 +1,34 @@
+#sidebar {
+  width: 25%;
+  background-color: lightblue;
+  padding: 30px 10px;
+}
+#sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#sidebar li {
+  padding: 6px;
+  margin-bottom: 10px;
+  background-color: #10A2FF;
+  color: #ffffff;
+}
+
+.circle-red {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+}
+
+.circle-green {
+  width: 200px;
+  height: 200px;
+  background: green;
+  border-radius: 50%;
+}
+
+#set_width {
+  padding-left: 95px;
+}/*# sourceMappingURL=demo.css.map */

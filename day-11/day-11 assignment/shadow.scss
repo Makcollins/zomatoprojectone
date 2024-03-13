@@ -1,0 +1,51 @@
+// @mixin box-des($width,$bgcolor,$size,$blur){
+//     box-shadow: $size $size $blur rgb(88, 88, 88);
+
+// }
+
+// .box{
+//     @include box-des();
+//     background-color: white;
+//     h1{
+//         color: red;
+//     }
+// }
+// .blue{
+//     @include box-des(200px, gray,6px ,5px );
+//     h1{
+//         color: blue;
+//     }
+// }
+// .my-boxes{
+//     display: flex;
+//     justify-content: space-around;
+
+// }
+@mixin box_des($width,$bgcolor){
+    box-shadow:10px 10px 6px rgb(88, 88, 88);
+    width: $width;
+    background-color: $bgcolor;
+    padding: 10px;
+}
+.box{
+    @include box_des(200px, rgb(0, 102, 255) );
+}
+.box-blue{
+    @include box_des(150px, gray);
+    h1 {
+       color: red; 
+    }
+}
+.box-brown {
+    @include box_des(auto,auto );
+    p{
+        color: brown;
+    }
+}
+
+.my-boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+

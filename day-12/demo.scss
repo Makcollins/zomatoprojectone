@@ -1,0 +1,45 @@
+#sidebar {
+    // float:left;
+    width: 25%;
+    background-color:lightblue;
+    padding: 30px 10px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        padding: 6px;
+        margin-bottom: 10px;
+        background-color: #10A2FF;
+        color: #ffffff;
+    }
+
+}
+
+@mixin circle($width,$height,$color){
+    width: $width;
+    height: $height;
+    background: $color;
+    border-radius: 50%;
+}
+
+.circle-red {
+    @include circle(100px,100px, red)
+}
+
+.circle-green {
+    @include circle(200px,200px, green)
+}
+
+
+$first-width: 5px;
+$second-width: 5px;
+@function adjust_width($n) {
+ @return $n * $first-width + ($n - 1) * $second-width;
+}
+#set_width { 
+    padding-left: 
+    adjust_width(10); 
+}

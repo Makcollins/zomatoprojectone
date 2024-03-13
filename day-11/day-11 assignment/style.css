@@ -1,0 +1,22 @@
+body {
+  background-color: gray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading {
+  color: red;
+}
+
+.par {
+  color: black;
+}
+
+.button-next {
+  color: white;
+  font-style: italic;
+  font-weight: 900;
+  height: 30px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5px;
+}/*# sourceMappingURL=style.css.map */

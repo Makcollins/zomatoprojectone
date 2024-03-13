@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRINGS</title>
+</head>
+<body>
+    <script>
+        // charAt() - Returns the character at a specified index.
+        var str1 = "Hey Mak";
+        console.log(str1.charAt(2));
+
+        //concat() - concatenates 2 or more strings
+        var str2 = ", Do you like JavaScript?";
+        console.log(str1.concat(str2));
+
+        // includes() - Determines whether a string contains a certain substring
+        console.log(str2.includes("JavaScript"));
+
+        // Returns the index of the first occurrence of a specified value
+        console.log(str1.indexOf("Mak"));
+
+        //replace(): Replaces a specified value with another value in a string
+        console.log(str1.replace("Mak","Collins"));
+
+        //slice(): Extracts a part of a string and returns it as a new string.
+        console.log(str2.slice(9,13));
+
+        //split(): Splits a string into an array of substrings.
+        console.log(str2.split(" "));
+
+        //toLowerCase(): Converts a string to lowercase letters.
+        console.log(str1.toLowerCase());
+
+        //toUpperCase(): Converts a string to uppercase letters
+        console.log(str1.toUpperCase());
+
+        //trim(): Removes whitespace from both ends of a string
+        var str3 = "  Coding is my Hobby ";
+        console.log(str3);
+        console.log(str3.trim());
+
+        //11. substring(): Returns the part of the string between the start and end indexes
+        console.log(str3.substring(2,8));
+
+        // repeat(): Returns a new string with a specified number of copies of the string it is called on
+        console.log(str1.repeat(3));
+
+        //search(): Executes a search for a match between a regular expression and this String object
+        console.log(str3.search("Hobby"));
+
+        // match(): Retrieves the matches when matching a string against a regular expression.
+        var str4 = "Today is My Birthday";
+        console.log(str4.match(/day/g));
+
+    </script>
+</body>
+</html>

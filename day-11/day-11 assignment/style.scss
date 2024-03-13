@@ -1,0 +1,25 @@
+$color: red;
+$bg-color: gray;
+$primary-color: black;
+$radius: 5px;
+$border-style: solid;
+
+body{
+    background-color: $bg-color;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading {
+    color: $color;
+}
+.par{
+    color: $primary-color;
+}
+.button-next {
+    color: white;
+    font-style:italic;
+    font-weight: 900;
+    height: 30px;
+    background-color: $color;
+    border: 2px $border-style $primary-color;
+    border-radius: $radius;
+}

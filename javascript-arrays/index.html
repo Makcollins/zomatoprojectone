@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRRAYS IN JAVASCRIPT</title>
+</head>
+<body>
+    <script>
+        //push() - adds elements to the end
+        let fruits = ["Mango", "Orange"];
+        fruits.push("Banana");
+        console.log(fruits);
+
+        // fruits = ["Mango", "Orange","Banana"];
+
+        //unshift (): Adds elements to the beginning of an array
+        fruits.unshift("Pineapple");
+        console.log(fruits)
+
+        //["Pineapple","Mango","Orange", "Banana"]
+        //.......................................................................
+
+        //REMOVING ELEMENTS
+
+        // pop():Removes the last element from an array.
+        fruits.pop();
+        console.log(fruits);
+
+        //["Pineapple","Mango","Orange"]
+
+        // shift ():Removes the first element from an array.
+        fruits.shift();
+        console.log(fruits);
+
+        //["Mango","Orange"]
+        //----------------------------------------------------------------
+        //FINDING ELEMENTS
+
+        // indexOf(): Returns the first index at which a specified element can be found
+        let index = fruits.indexOf("Orange");
+        console.log(index);
+
+        //ITERATING OVER ARRAY ELEMENTS
+        // forEach(): Executes a provided function once for each array element.
+        fruits.forEach((fruit)=>console.log(fruit));
+        // fruits.forEach(
+        //     function mine(fruit){
+        //         console.log(fruit);
+        //     }
+        // ); 
+        //----------------------------------------------------------------------
+        //TRANSFORMING ARRAY ELEMENTS
+
+        // map(): Creates a new array with the results of calling a function for every array element
+        let lengths = fruits.map((fruits) => fruits.length);
+        console.log(lengths);
+
+        // filter(): Creates a new array with all elements that pass the test implemented by the provided function.
+        let longfruits = fruits.filter((fruits) => fruits.length>5);
+        console.log(longfruits);
+
+        // reduce(): Reduces the array to a single value by executing a reducer function for each element.
+        let nums = [3,6,7,4];
+        let sum = nums.reduce((total,nums) => total+nums,0);
+        console.log(sum);
+
+        // slice(): Returns a shallow copy of a portion of an array.
+        let mefruit = fruits.slice(0,1);
+        console.log(mefruit);
+
+        // splice(): Changes the contents of an array by removing or replacing existing elements and/or adding new elements.
+        fruits.splice(1,0,"Avocado");
+        console.log(fruits)
+
+        // join(): Joins all elements of an array into a string.
+        let fruitString = fruits.join(", ");
+        console.log(fruitString);
+
+        // sort(): Sorts the elements of an array.
+        fruits.sort();
+        console.log(fruits)
+
+    </script>
+</body>
+</html>

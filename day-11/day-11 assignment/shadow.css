@@ -1,0 +1,32 @@
+.box {
+  box-shadow: 10px 10px 6px rgb(88, 88, 88);
+  width: 200px;
+  background-color: rgb(0, 102, 255);
+  padding: 10px;
+}
+
+.box-blue {
+  box-shadow: 10px 10px 6px rgb(88, 88, 88);
+  width: 150px;
+  background-color: gray;
+  padding: 10px;
+}
+.box-blue h1 {
+  color: red;
+}
+
+.box-brown {
+  box-shadow: 10px 10px 6px rgb(88, 88, 88);
+  width: auto;
+  background-color: auto;
+  padding: 10px;
+}
+.box-brown p {
+  color: brown;
+}
+
+.my-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}/*# sourceMappingURL=shadow.css.map */
