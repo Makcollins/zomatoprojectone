@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise catch</title>
+</head>
+<body>
+    <script>
+        const avalue = new Promise((resolve,reject) =>{
+            resolve("Promise resolved");
+        });
+
+        avalue.then(
+            function successVal(result){
+                console.log(result);
+            }
+        );
+
+        avalue.then(
+            function successVal1(){
+                console.log("You can call multiple functions this way");
+            }
+        );
+
+        // avalue.catch(
+        //     function errorVal(result){
+        //         console.log(result);
+        //     }
+        // );
+        console.log("start");
+
+        const prom1 = new Promise((resolve,reject) =>{
+            console.log(1);
+        });
+        console.log("end");
+    </script>
+</body>
+</html>

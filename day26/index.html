@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <h1>JavaScript Promise Object</h1>
+    <h2>The then() method</h2>
+    <p>Wait 4 seconds (4000 milliseconds) for this page to change</p>
+    <h1 id="demo"></h1>
+    <script>
+        const myPromise = new Promise((myResolve,myReject)=>{
+            setTimeout(()=>myResolve("MakCollins"), 3000);
+        });
+
+        myPromise.then((value)=>{
+            document.getElementById("demo").innerHTML = value;
+        });
+        // const count = true;
+
+        // const countValue = new Promise((resolve,reject) =>{
+        //     if(count){
+        //         resolve("Count is true");
+        //     }
+        //     else{
+        //         reject("Count is false");
+        //     }
+        // });
+
+        // console.log(countValue);
+    </script>
+</body>
+</html>

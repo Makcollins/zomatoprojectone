@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT HANDLING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">Me</div>
+        </div>
+    </div>
+
+    <div class="anothergrandy">
+        <div class="anparent">
+            <div class="baby"></div>
+        </div>
+    </div>
+    <script>
+        // Bubbling
+        const grandy =document.querySelector(".grandparent");
+        const parent = document.querySelector(".parent");
+        const child = document.querySelector(".child");
+        grandy.addEventListener("click", () => {alert("Hello Grandy")});
+        parent.addEventListener("click", () => {alert("Hello Parent")});
+        child.addEventListener("click", (event) => {alert("Hello Baby");event.stopPropagation();}) 
+
+        // Capture
+        const mygrandy = document.querySelector(".anothergrandy");
+        const mypar = document.querySelector(".anparent");
+        const baby = document.querySelector(".baby")
+        mygrandy.addEventListener("click", () => {alert("The grandy")},true);
+        mypar.addEventListener("click", () => {alert("The parent")}, true);
+        baby.addEventListener("click", () => {alert("The Baby")}, true)
+    </script>
+</body>
+</html>

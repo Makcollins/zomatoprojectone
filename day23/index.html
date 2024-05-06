@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+    <p id="obj"></p>
+    <script>
+        "use strict";
+        var stdObj = {
+            rno : 345,
+            name : "Collins",
+        }
+
+        //object destructiring --- old way
+        var roll = stdObj.rno;
+        document.write(`Student roll number is ${roll}<br>`);
+
+        //new way
+
+        const {rno,name} = stdObj;
+
+        let objitem = `This done in a new way<br>Student roll is <strong>${rno}</strong>, name is <strong>${name}</strong>`;
+        // document.getElementById("obj").innerHTML= objjitem;
+
+        document.write(objitem);
+
+        //REst operator
+
+        var sum = (a, ...b) => {
+            let sum = 0;
+            for(let value of b){
+                sum = sum+value;
+            }
+            return sum+a
+        }
+
+        let res = sum(45,33,50,20);
+        document.write(`<br><br>Rest operator: sum result is <strong>${res}</strong>`)
+    </script>
+</body>
+</html>

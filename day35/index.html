@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data structures</title>
+</head>
+<body>
+    <script>
+        let set = new Set(); set.add(1); set.add(1); console.log(set.size);
+
+        let map = new Map(); map.set('key', 'value'); console.log(map.get('key'));
+
+        function length(head) { 
+            let count = 0; 
+            while(head) {
+                 count++; 
+                 head = head.next; 
+            }
+             return count;
+        }
+
+        console.log(length(10));
+
+    </script>
+</body>
+</html>

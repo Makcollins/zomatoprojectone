@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function currying</title>
+</head>
+<body>
+    <script>
+        function sum(a) {
+            return function (b){
+                return function (c){
+                    console.log(`a: ${a} b:${b} c:${c}`);
+                    console.log(a+b+c);
+                }
+            }
+        }
+        sum (10)(20)(30);
+
+        //call method
+        let student = {
+            firstaName: "Mark",
+            lastName: "finley",
+            printStudent: function (gender, age){
+                console.log(this.firstaName, this.lastName,gender,age);
+            }
+        };
+
+        let student1 = {
+            firstaName: "Joseph",
+            lastName: "karanja",
+        }
+        student.printStudent("Male",54);
+        student.printStudent.call(student1,"male", 28);
+    </script>
+</body>
+</html>

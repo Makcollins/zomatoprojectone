@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict mode</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        function sum(a, a, c) { 'use strict'; return a + a + c; }; console.log(sum(1, 2, 3));
+
+        // function sum(a, b = a){return a+b}
+        // console.log(sum(3));
+
+        function foo(a, b = 5) { return a + b; }  
+        console.log(foo(2));
+
+        var x = 674;
+        console.log(x);
+        function show(){
+            var y= 30;
+            console.log(y);
+        }
+        show();
+
+        (()=>{
+            "use strict";
+            const pi =3.14;
+            console.log(pi);
+        })();
+
+        function checkThis(){
+            return this;
+        }
+        console.log(checkThis());
+
+        //DEFAULT PARAMS
+        // const sum = (a=15,b=8) => {
+        //     return a+b;
+        // }
+
+        document.write(`The sum is <strong>${sum(10,20)}</strong><br>`);
+        document.write(`The sum is <strong>${sum(10)}</strong><br>`);
+        document.write(`The sum is <strong>${sum()}</strong><br>`);
+
+    </script>
+</body>
+</html>

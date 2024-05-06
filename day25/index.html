@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous programming</title>
+</head>
+<body>
+    <script>
+        //Synchronous programming
+
+        function someLongRunningFunction(){
+            let start = Date.now();
+            while(Date.now - start < 5000){
+                //
+            }
+            return "Hello"
+        }
+
+        console.log("Starting...");
+        let result = someLongRunningFunction();
+
+        console.log(result);
+        console.log("Finishing...")
+
+        //Assychronous
+        //CALLBACKS
+        function do_sum(num1,num2,callb){
+            var sum=0;
+            sum = num1+num2;
+
+            callb(sum);
+        }
+
+        do_sum(13,17,function(result){
+            document.write(`${result}<br><br>`)
+        });
+
+        //example 2
+        function greet(name, message){
+            document.write(`Hi ${name} `);
+            message();
+        }
+        greet("Collins", () =>{
+            document.write("You are now learning callbacks");
+        })
+
+    </script>
+</body>
+</html>

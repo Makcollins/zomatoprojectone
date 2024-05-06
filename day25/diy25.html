@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks DIY25</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        placeOrder({orderId:1234 ,
+                items: ["Soda","Bread"],
+            }, function(error, updateOrder){
+                if(error){
+                    console.error('Order processing failed:',error);
+                }
+                else{
+                    console.log(`Order #${updateOrder.orderId} is now ${updateOrder.status}.`)
+                }
+            });
+
+        function placeOrder(objectOrder, func){
+           objectOrder = {
+            orderId:12,
+            items: ["juice","buns"],
+            status:"Ready"};
+            func(objectOrder.ready);
+        }
+    </script>
+</body>
+</html>

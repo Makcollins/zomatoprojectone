@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // new Promise((resolve, reject) => reject('Error')).catch(console.log)
+
+        new Promise((resolve, reject) => { resolve('Resolved!'); console.log('A'); }).then(res => console.log(res));
+
+        Promise.resolve('Success').catch(err => console.log('Error')).then(res => console.log(res));
+
+        Promise.resolve(5).then(x => x*2).then(x => console.log(x));
+    </script>
+</body>
+</html>

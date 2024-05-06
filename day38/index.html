@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+<body>
+    <script>
+        let x=1;
+        function recursion(x){
+            console.log(x);
+            if(x==5){
+                return
+            }
+            recursion(x+1);
+        }
+        // recursion(x);
+
+        //TOWER OF HANOI
+        function towerOfHanoi(n,src_rod,des_rod,aux_rod){
+            if(n==0){
+                return
+            }
+            towerOfHanoi(n-1,src_rod,aux_rod,des_rod);
+            console.log(`Move disk ${n} from ${src_rod} to ${des_rod}`);    
+            towerOfHanoi(n-1,aux_rod,des_rod,src_rod)
+        }
+        let n=3;
+        // towerOfHanoi(n,'A','C','B');
+
+        //FIBONACCI
+        function fibonacci(num){
+            if (num<2){
+                return num;
+            }else{
+                return fibonacci(num-1)+fibonacci(num-2);
+            }
+        }
+        
+        // for(let i=0;i<10;i++){
+        //     console.log(fibonacci(i));
+        // }
+
+        //STRING REVERSAL -- method 1
+        var string = "I love Mathematics";
+        var revString="";
+        for(let i=string.length-1;i>=0;i--){
+            revString+=string[i];
+        }
+        console.log(`Original string: ${string}`);
+        console.log(`Reversed string: ${revString}`);
+
+        //--method 2
+        var string2 = "Melody";
+        var revString2=string2.split("").reverse().join("");
+        console.log(`Original string: ${string2}`);
+        console.log(`Reversed string: ${revString2}`);
+
+        //Palindrome
+        var str3= "kanak";
+        var revStr3=str3.split("").reverse().join("");
+        if(str3===revStr3){
+            console.log(`${str3} is a palindrome`);
+        }
+        else{
+            console.log(`${str3} is not a palindrome`);
+        }
+
+        //ANAGRAM
+        var anag1 = "silent";
+        var anag2= "listen";
+        if(anag1.length !== anag2.length){
+            console.log(`${anag1} and ${anag2} are not Anagrams`);
+        }
+        let anag1Sort = anag1.split("").sort().join("");
+        let anag2Sort = anag2.split("").sort().join("");
+
+        if(anag1Sort === anag2Sort){
+            console.log(`${anag1} and ${anag2} are Anagrams`);
+        }
+        else{
+            console.log(`${anag1} and ${anag2} are not Anagrams`);
+        }
+    </script>
+</body>
+</html>

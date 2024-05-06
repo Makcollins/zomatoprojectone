@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser storage</title>
+</head>
+<body>
+    <script>
+        //creating cooking and setting expiring time
+        var date = new Date();
+        date.setTime(date.getTime()+(7*24*60*60*1000));
+        var expires = "expires="+date.toUTCString();
+
+        document.cookie= "username=MakCollins; "+expires+"; path=/";
+
+        //Localstorage  | setItem(key,value)
+        localStorage.setItem("greeting", "Hello, Members");
+        //storing data
+        localStorage.setItem("user", JSON.stringify({name: "Collins Makui", age:24}));
+
+        //Retrieving data
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        //-----------------------------------------------------------
+        //SESSION STORAGE
+        sessionStorage.setItem("greet","Hi, once again");
+
+    </script>
+</body>
+</html>
